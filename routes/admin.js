@@ -1,25 +1,27 @@
 const express = require("express");
 const adminRouter = express.Router();
 const admin = require("../middlewares/admin");
-const { Product } = require("../models/product");
+const { Details } = require("../models/details");
 const { PromiseProvider } = require("mongoose");
 
 // Add product
-adminRouter.post("/admin/add-product", async (req, res) => {
+adminRouter.post("/admin/add-details", async (req, res) => {
   try {
-    const { firstname,lastname,phonenum,address,category,title,description } = req.body;
-    let product = new Product({
-        firstname,
-        lastname,
-        phonenum,
-        address,
-        category,
-        title,
-        description,
+    const { name,youare,contactnumber,whatsappnumber,location,alstream,course,remark,scounselorname } = req.body;
+    let details = new Details({
+      name,
+      youare,
+      contactnumber,
+      whatsappnumber,
+      location,
+      alstream,
+      course,
+      remark,
+      scounselorname
         //images,
     });
-    product = await product.save();
-    res.json(product);
+    details = await details.save();
+    res.json(details);
   } catch (e) {
     res.status(500).json({ error: e.message });
   }

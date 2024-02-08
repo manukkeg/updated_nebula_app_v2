@@ -1,41 +1,51 @@
 const mongoose = require("mongoose");
 
-const productSchema = mongoose.Schema({
-  firstname: {
+const DetailsSchema = mongoose.Schema({
+    name: {
       type: String,
       required: true,
       trim: true,
     },
-    lastname: {
+    youare: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    contactnumber: {
         type: String,
         required: true,
         trim: true,
       },
-    phonenum: {
+    whatsappnumber: {
         type: String,
         required: true,
         trim: true,
       },
-    address: {
+    location: {
          type: String,
          required: true,
          trim: true,
       },
-    category: {
+    alstream: {
+        type: String,
+        required: true,
+        trim: true,
+      },
+    course: {
          type: String,
          required: true,
       },
-    title: {
+    remark: {
       type: String,
       required: true,
       trim: true,
     },
-    description: {
+    scounselorname: {
         type: String,
         required: true,
         trim: true,
         },
 });
 
-const Product = mongoose.model("Product", productSchema);
-module.exports = { Product, productSchema };
+const Details = mongoose.model("Details", DetailsSchema);
+module.exports = { Details, DetailsSchema };
