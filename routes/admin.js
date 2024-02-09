@@ -7,12 +7,13 @@ const { PromiseProvider } = require("mongoose");
 // Add product
 adminRouter.post("/admin/add-details", async (req, res) => {
   try {
-    const { name,youare,contactnumber,whatsappnumber,location,alstream,course,remark,scounselorname } = req.body;
+    const { name,youare,contactnumber,whatsappnumber,email,location,alstream,course,remark,scounselorname } = req.body;
     let details = new Details({
       name,
       youare,
       contactnumber,
       whatsappnumber,
+      email,
       location,
       alstream,
       course,
