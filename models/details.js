@@ -36,10 +36,10 @@ const DetailsSchema = mongoose.Schema({
         required: true,
         trim: true,
       },
-    course: {
-         type: String,
-         required: true,
-      },
+    course:  [{ 
+      type: String,
+      required: true,
+   }],
     remark: {
       type: String,
       required: true,
