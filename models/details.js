@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const moment = require("moment-timezone");
 
 const DetailsSchema = mongoose.Schema({
     name: {
@@ -50,6 +51,10 @@ const DetailsSchema = mongoose.Schema({
         required: true,
         trim: true,
         },
+    createdAt: {
+          type: String,
+          required: true,
+      },
 });
 
 const Details = mongoose.model("Details", DetailsSchema);
