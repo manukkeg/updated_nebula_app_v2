@@ -5,7 +5,7 @@ const { Details } = require("../models/details");
 const { PromiseProvider } = require("mongoose");
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
-const moment = require("moment-timezone");
+
 
 // Add product
 adminRouter.post("/admin/add-details", async (req, res) => {
