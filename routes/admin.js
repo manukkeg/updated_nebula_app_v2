@@ -54,5 +54,4 @@ adminRouter.post("/admin/signin", async (req, res) => {
   }
 });
 
-
 module.exports = adminRouter;
